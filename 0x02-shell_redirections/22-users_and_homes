@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(cat /etc/passwd | tr ':' '\n' | sort | uniq -f1 | tr '\n' ':')
+cat /etc/passwd | sort -k1 | cut -d ':' -f1,6
